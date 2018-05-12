@@ -15,7 +15,7 @@ void main(void) {
     config();
     init_hd44780();
     //write_char_hd44780('H');
-    //write_char_hd44780('E');
+    write_char_hd44780('E');
     
     write_string_hd44780("Hello World",2);
     while(1)

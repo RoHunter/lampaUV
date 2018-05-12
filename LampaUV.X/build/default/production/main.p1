@@ -2,6 +2,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [p mainexit ]
 "3 hd44780.h
 [v _init_hd44780 `(v ~T0 @X0 0 ef ]
+"4
+[v _write_char_hd44780 `(v ~T0 @X0 0 ef1`uc ]
 "5
 [v _write_string_hd44780 `(v ~T0 @X0 0 ef2`*uc`ui ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
@@ -13156,6 +13158,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 16: init_hd44780();
 "16
 [e ( _init_hd44780 ..  ]
+[; ;main.c: 18: write_char_hd44780('E');
+"18
+[e ( _write_char_hd44780 (1 -> -> 69 `ui `uc ]
 [; ;main.c: 20: write_string_hd44780("Hello World",2);
 "20
 [e ( _write_string_hd44780 (2 , -> :s 1C `*uc -> -> 2 `i `ui ]
