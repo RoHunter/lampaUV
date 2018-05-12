@@ -2,8 +2,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [p mainexit ]
 "3 hd44780.h
 [v _init_hd44780 `(v ~T0 @X0 0 ef ]
-"4
-[v _write_char_hd44780 `(v ~T0 @X0 0 ef1`uc ]
 "5
 [v _write_string_hd44780 `(v ~T0 @X0 0 ef2`*uc`ui ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
@@ -13093,52 +13091,52 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;config.h: 8: {
 [e :U _config ]
 [f ]
-"10
-[p x FEXTOSC=HS ]
-"11
-[p x RSTOSC=EXT1X ]
-"12
-[p x CLKOUTEN=OFF ]
-"13
-[p x CSWEN=ON ]
-"14
-[p x FCMEN=ON ]
+"16
+[p x FEXTOSC=ECH ]
 "17
-[p x MCLRE=ON ]
+[p x RSTOSC=EXT1X ]
 "18
-[p x PWRTE=OFF ]
+[p x CLKOUTEN=OFF ]
 "19
-[p x LPBOREN=OFF ]
+[p x CSWEN=OFF ]
 "20
-[p x BOREN=ON ]
-"21
-[p x BORV=LO ]
-"22
-[p x ZCD=OFF ]
+[p x FCMEN=ON ]
 "23
-[p x PPS1WAY=ON ]
+[p x MCLRE=OFF ]
 "24
-[p x STVREN=ON ]
+[p x PWRTE=OFF ]
+"25
+[p x LPBOREN=OFF ]
+"26
+[p x BOREN=ON ]
 "27
-[p x WDTCPS=WDTCPS_31 ]
+[p x BORV=LO ]
 "28
-[p x WDTE=ON ]
+[p x ZCD=OFF ]
 "29
-[p x WDTCWS=WDTCWS_7 ]
+[p x PPS1WAY=ON ]
 "30
-[p x WDTCCS=SC ]
+[p x STVREN=ON ]
 "33
-[p x WRT=OFF ]
+[p x WDTCPS=WDTCPS_31 ]
 "34
-[p x SCANE=available ]
+[p x WDTE=OFF ]
 "35
-[p x LVP=ON ]
-"38
-[p x CP=OFF ]
+[p x WDTCWS=WDTCWS_7 ]
+"36
+[p x WDTCCS=SC ]
 "39
+[p x WRT=OFF ]
+"40
+[p x SCANE=available ]
+"41
+[p x LVP=ON ]
+"44
+[p x CP=OFF ]
+"45
 [p x CPD=OFF ]
-[; ;config.h: 43: }
-"43
+[; ;config.h: 54: }
+"54
 [e :UE 1563 ]
 }
 [; ;hd44780.h: 3: void init_hd44780();
@@ -13158,9 +13156,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 16: init_hd44780();
 "16
 [e ( _init_hd44780 ..  ]
-[; ;main.c: 18: write_char_hd44780('E');
-"18
-[e ( _write_char_hd44780 (1 -> -> 69 `ui `uc ]
 [; ;main.c: 20: write_string_hd44780("Hello World",2);
 "20
 [e ( _write_string_hd44780 (2 , -> :s 1C `*uc -> -> 2 `i `ui ]

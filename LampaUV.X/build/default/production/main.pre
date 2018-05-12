@@ -17340,14 +17340,16 @@ extern __bank0 __bit __timeout;
 void config()
 {
 
-#pragma config FEXTOSC = HS
+
+# 16
+#pragma config FEXTOSC = ECH
 #pragma config RSTOSC = EXT1X
 #pragma config CLKOUTEN = OFF
-#pragma config CSWEN = ON
+#pragma config CSWEN = OFF
 #pragma config FCMEN = ON
 
 
-#pragma config MCLRE = ON
+#pragma config MCLRE = OFF
 #pragma config PWRTE = OFF
 #pragma config LPBOREN = OFF
 #pragma config BOREN = ON
@@ -17358,7 +17360,7 @@ void config()
 
 
 #pragma config WDTCPS = WDTCPS_31
-#pragma config WDTE = ON
+#pragma config WDTE = OFF
 #pragma config WDTCWS = WDTCWS_7
 #pragma config WDTCCS = SC
 
@@ -17371,8 +17373,7 @@ void config()
 #pragma config CP = OFF
 #pragma config CPD = OFF
 
-
-
+# 54
 }
 
 # 3 "hd44780.h"
@@ -17386,7 +17387,7 @@ void main(void) {
 config();
 init_hd44780();
 
-write_char_hd44780('E');
+
 
 write_string_hd44780("Hello World",2);
 while(1)
