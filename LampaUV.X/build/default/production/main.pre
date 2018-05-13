@@ -17342,7 +17342,7 @@ void config()
 
 
 # 16
-#pragma config FEXTOSC = ECH
+#pragma config FEXTOSC = OFF
 #pragma config RSTOSC = EXT1X
 #pragma config CLKOUTEN = OFF
 #pragma config CSWEN = OFF

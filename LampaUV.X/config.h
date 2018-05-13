@@ -13,7 +13,7 @@ void config()
 // 'C' source line config statements
 
 // CONFIG1
-#pragma config FEXTOSC = ECH    // External Oscillator mode selection bits (EC above 8MHz; PFM set to high power)
+#pragma config FEXTOSC = OFF   // External Oscillator mode selection bits (EC above 8MHz; PFM set to high power)
 #pragma config RSTOSC = EXT1X   // Power-up default value for COSC bits (EXTOSC operating per FEXTOSC bits)
 #pragma config CLKOUTEN = OFF   // Clock Out Enable bit (CLKOUT function is disabled; i/o or oscillator function on OSC2)
 #pragma config CSWEN = OFF      // Clock Switch Enable bit (The NOSC and NDIV bits cannot be changed by user software)

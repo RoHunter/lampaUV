@@ -13092,7 +13092,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :U _config ]
 [f ]
 "16
-[p x FEXTOSC=ECH ]
+[p x FEXTOSC=OFF ]
 "17
 [p x RSTOSC=EXT1X ]
 "18

@@ -17443,24 +17443,24 @@ extern char * strichr(const char *, int);
 extern char * strrchr(const char *, int);
 extern char * strrichr(const char *, int);
 
-# 20 "C:/Users/Silviu/Desktop/HD44780_Lib.X/HD44780_Lib.X/hd44780.c"
+# 19 "C:/Users/Silviu/Desktop/HD44780_Lib.X/HD44780_Lib.X/hd44780.c"
 void init_hd44780()
 {
-LATBbits.LATB0=0;
-LATBbits.LATB1=0;
+LATBbits.LATA6=0;
 
 
-LATBbits.LATB2=1;
+
+LATBbits.LATA7=1;
 LATC=0b00000001;
-_delay((unsigned long)((10)*(64000000/4000.0)));
-LATBbits.LATB2=0;
+_delay((unsigned long)((10)*(32000000/4000.0)));
+LATBbits.LATA7=0;
 
 
 
-LATBbits.LATB2=1;
+LATBbits.LATA7=1;
 LATC=0b00001110;
-_delay((unsigned long)((10)*(64000000/4000.0)));
-LATBbits.LATB2=0;
+_delay((unsigned long)((10)*(32000000/4000.0)));
+LATBbits.LATA7=0;
 
 
 
@@ -17468,13 +17468,13 @@ LATBbits.LATB2=0;
 
 void write_char_hd44780(char chr)
 {
-LATBbits.LATB1=0;
-LATBbits.LATB0=1;
-LATBbits.LATB2=1;
+RW=0;
+LATBbits.LATA6=1;
+LATBbits.LATA7=1;
 LATC=chr;
-_delay((unsigned long)((10)*(64000000/4000.0)));
-LATBbits.LATB0=0;
-LATBbits.LATB2=0;
+_delay((unsigned long)((10)*(32000000/4000.0)));
+LATBbits.LATA6=0;
+LATBbits.LATA7=0;
 
 
 }
@@ -17484,13 +17484,13 @@ void write_string_hd44780(char *string,unsigned rand)
 
 for(int i=0;i<strlen(string);i++)
 {
-LATBbits.LATB1=0;
-LATBbits.LATB0=1;
-LATBbits.LATB2=1;
+RW=0;
+LATBbits.LATA6=1;
+LATBbits.LATA7=1;
 LATC=string[i];
-_delay((unsigned long)((10)*(64000000/4000.0)));
-LATBbits.LATB0=0;
-LATBbits.LATB2=0;
+_delay((unsigned long)((10)*(32000000/4000.0)));
+LATBbits.LATA6=0;
+LATBbits.LATA7=0;
 
 }
 
@@ -17500,12 +17500,12 @@ LATBbits.LATB2=0;
 void row_sel_hd44780(unsigned row)
 {
 
-LATBbits.LATB0=0;
-LATBbits.LATB1=0;
-LATBbits.LATB2=1;
+LATBbits.LATA6=0;
+RW=0;
+LATBbits.LATA7=1;
 LATC=0xc0;
-_delay((unsigned long)((10)*(64000000/4000.0)));
-LATBbits.LATB2=0;
+_delay((unsigned long)((10)*(32000000/4000.0)));
+LATBbits.LATA7=0;
 
 
 }
