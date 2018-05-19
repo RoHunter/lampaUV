@@ -7,20 +7,20 @@
 
 
 
-#define _XTAL_FREQ 64000000
+#define _XTAL_FREQ 32000000
 #include <xc.h>
 #include "hd44780.h"
+#include "bit_config.h"
 #include <stdio.h>
 #include <string.h>
 #define data_port LATC
-#define RS LATBbits.LATB0
-#define RW LATBbits.LATB1
-#define E LATBbits.LATB2
+#define RS LATAbits.LATA6
+#define E LATAbits.LATA7
 
 void init_hd44780()
 {
     RS=0;
-    RW=0;
+
     
     
     E=1;
@@ -41,7 +41,6 @@ void init_hd44780()
 
 void write_char_hd44780(char chr)
 {
-    RW=0;
     RS=1;
     E=1;
     data_port=chr;
@@ -57,7 +56,6 @@ void write_string_hd44780(char *string,unsigned rand)
     
     for(int i=0;i<strlen(string);i++)
     {
-    RW=0;
     RS=1;
     E=1;
     data_port=string[i];
@@ -74,7 +72,6 @@ void row_sel_hd44780(unsigned row)
 {
 
     RS=0;
-    RW=0;
     E=1;
     data_port=0xc0;//row 2
     __delay_ms(10);

@@ -17336,27 +17336,23 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 
-# 7 "config.h"
-void config()
-{
 
-
-# 16
-#pragma config FEXTOSC = OFF
-#pragma config RSTOSC = EXT1X
+# 7 "bit_config.h"
+#pragma config FEXTOSC = ECH
+#pragma config RSTOSC = HFINTPLL
 #pragma config CLKOUTEN = OFF
 #pragma config CSWEN = OFF
-#pragma config FCMEN = ON
+#pragma config FCMEN = OFF
 
 
-#pragma config MCLRE = OFF
+#pragma config MCLRE = ON
 #pragma config PWRTE = OFF
 #pragma config LPBOREN = OFF
-#pragma config BOREN = ON
+#pragma config BOREN = OFF
 #pragma config BORV = LO
 #pragma config ZCD = OFF
-#pragma config PPS1WAY = ON
-#pragma config STVREN = ON
+#pragma config PPS1WAY = OFF
+#pragma config STVREN = OFF
 
 
 #pragma config WDTCPS = WDTCPS_31
@@ -17373,18 +17369,15 @@ void config()
 #pragma config CP = OFF
 #pragma config CPD = OFF
 
-# 54
-}
-
 # 3 "hd44780.h"
 void init_hd44780();
 void write_char_hd44780(char chr);
 void write_string_hd44780(char *string, unsigned rand);
 void row_sel_hd44780(unsigned row);
 
-# 14 "main.c"
+# 15 "main.c"
 void main(void) {
-config();
+
 init_hd44780();
 
 
@@ -17392,7 +17385,10 @@ init_hd44780();
 write_string_hd44780("Hello World",2);
 while(1)
 {
-
+PORTC=0;
+_delay((unsigned long)((1000)*(32000000/4000.0)));
+PORTC=1;
+_delay((unsigned long)((1000)*(32000000/4000.0)));
 
 }
 }

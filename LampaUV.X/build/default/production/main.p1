@@ -4,6 +4,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _init_hd44780 `(v ~T0 @X0 0 ef ]
 "5
 [v _write_string_hd44780 `(v ~T0 @X0 0 ef2`*uc`ui ]
+"506 C:\Program Files (x86)\Microchip\xc8\v1.44\include\pic16f18855.h
+[v _PORTC `Vuc ~T0 @X0 0 e@14 ]
+[v F14219 `(v ~T0 @X0 1 tf1`ul ]
+"153 C:\Program Files (x86)\Microchip\xc8\v1.44\include\pic.h
+[v __delay `JF14219 ~T0 @X0 0 e ]
+[p i __delay ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -13083,98 +13089,95 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic.h: 193: extern __bank0 unsigned char __resetbits;
 [; ;pic.h: 194: extern __bank0 __bit __powerdown;
 [; ;pic.h: 195: extern __bank0 __bit __timeout;
-"7 config.h
-[v _config `(v ~T0 @X0 1 ef ]
+"7 bit_config.h
+[p x FEXTOSC=ECH ]
 "8
-{
-[; ;config.h: 7: void config()
-[; ;config.h: 8: {
-[e :U _config ]
-[f ]
-"16
-[p x FEXTOSC=OFF ]
-"17
-[p x RSTOSC=EXT1X ]
-"18
+[p x RSTOSC=HFINTPLL ]
+"9
 [p x CLKOUTEN=OFF ]
-"19
+"10
 [p x CSWEN=OFF ]
-"20
-[p x FCMEN=ON ]
-"23
-[p x MCLRE=OFF ]
-"24
+"11
+[p x FCMEN=OFF ]
+"14
+[p x MCLRE=ON ]
+"15
 [p x PWRTE=OFF ]
-"25
+"16
 [p x LPBOREN=OFF ]
-"26
-[p x BOREN=ON ]
-"27
+"17
+[p x BOREN=OFF ]
+"18
 [p x BORV=LO ]
-"28
+"19
 [p x ZCD=OFF ]
-"29
-[p x PPS1WAY=ON ]
-"30
-[p x STVREN=ON ]
-"33
+"20
+[p x PPS1WAY=OFF ]
+"21
+[p x STVREN=OFF ]
+"24
 [p x WDTCPS=WDTCPS_31 ]
-"34
+"25
 [p x WDTE=OFF ]
-"35
+"26
 [p x WDTCWS=WDTCWS_7 ]
-"36
+"27
 [p x WDTCCS=SC ]
-"39
+"30
 [p x WRT=OFF ]
-"40
+"31
 [p x SCANE=available ]
-"41
+"32
 [p x LVP=ON ]
-"44
+"35
 [p x CP=OFF ]
-"45
+"36
 [p x CPD=OFF ]
-[; ;config.h: 54: }
-"54
-[e :UE 1563 ]
-}
 [; ;hd44780.h: 3: void init_hd44780();
 [; ;hd44780.h: 4: void write_char_hd44780(char chr);
 [; ;hd44780.h: 5: void write_string_hd44780(char *string, unsigned rand);
 [; ;hd44780.h: 6: void row_sel_hd44780(unsigned row);
 [v $root$_main `(v ~T0 @X0 0 e ]
-"14 main.c
+"15 main.c
 [v _main `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 14: void main(void) {
+[; ;main.c: 15: void main(void) {
 [e :U _main ]
 [f ]
-[; ;main.c: 15: config();
-"15
-[e ( _config ..  ]
-[; ;main.c: 16: init_hd44780();
-"16
+[; ;main.c: 17: init_hd44780();
+"17
 [e ( _init_hd44780 ..  ]
-[; ;main.c: 20: write_string_hd44780("Hello World",2);
-"20
+[; ;main.c: 21: write_string_hd44780("Hello World",2);
+"21
 [e ( _write_string_hd44780 (2 , -> :s 1C `*uc -> -> 2 `i `ui ]
-[; ;main.c: 21: while(1)
-"21
-[e :U 1566 ]
-[; ;main.c: 22: {
+[; ;main.c: 22: while(1)
 "22
-{
-"25
-}
 [e :U 1565 ]
-"21
-[e $U 1566  ]
-[e :U 1567 ]
-[; ;main.c: 25: }
-[; ;main.c: 26: }
+[; ;main.c: 23: {
+"23
+{
+[; ;main.c: 24: PORTC=0;
+"24
+[e = _PORTC -> -> 0 `i `uc ]
+[; ;main.c: 25: _delay((unsigned long)((1000)*(32000000/4000.0)));
+"25
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+[; ;main.c: 26: PORTC=1;
 "26
-[e :UE 1564 ]
+[e = _PORTC -> -> 1 `i `uc ]
+[; ;main.c: 27: _delay((unsigned long)((1000)*(32000000/4000.0)));
+"27
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"29
+}
+[e :U 1564 ]
+"22
+[e $U 1565  ]
+[e :U 1566 ]
+[; ;main.c: 29: }
+[; ;main.c: 30: }
+"30
+[e :UE 1563 ]
 }
 [a 1C 72 101 108 108 111 32 87 111 114 108 100 0 ]
 
