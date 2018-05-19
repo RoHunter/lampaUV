@@ -21,9 +21,9 @@ void main(void) {
     write_string_hd44780("Hello World",2);
     while(1)
     {
-   PORTC=0;
+   PORTC=0x00;
     __delay_ms(1000);
-     PORTC=1;
+     PORTC=0xff;
     __delay_ms(1000);
      
     }

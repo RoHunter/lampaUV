@@ -17385,9 +17385,9 @@ init_hd44780();
 write_string_hd44780("Hello World",2);
 while(1)
 {
-PORTC=0;
+PORTC=0x00;
 _delay((unsigned long)((1000)*(32000000/4000.0)));
-PORTC=1;
+PORTC=0xff;
 _delay((unsigned long)((1000)*(32000000/4000.0)));
 
 }

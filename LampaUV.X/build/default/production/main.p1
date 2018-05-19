@@ -13156,15 +13156,15 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 23: {
 "23
 {
-[; ;main.c: 24: PORTC=0;
+[; ;main.c: 24: PORTC=0x00;
 "24
 [e = _PORTC -> -> 0 `i `uc ]
 [; ;main.c: 25: _delay((unsigned long)((1000)*(32000000/4000.0)));
 "25
 [e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-[; ;main.c: 26: PORTC=1;
+[; ;main.c: 26: PORTC=0xff;
 "26
-[e = _PORTC -> -> 1 `i `uc ]
+[e = _PORTC -> -> 255 `i `uc ]
 [; ;main.c: 27: _delay((unsigned long)((1000)*(32000000/4000.0)));
 "27
 [e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
