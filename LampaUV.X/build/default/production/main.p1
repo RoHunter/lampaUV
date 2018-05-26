@@ -1,16 +1,16 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"38385 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic16f18855.h
-[v _RB0 `Vb ~T0 @X0 0 e@104 ]
-"38399
-[v _RB1 `Vb ~T0 @X0 0 e@105 ]
-"38413
-[v _RB2 `Vb ~T0 @X0 0 e@106 ]
-"38427
-[v _RB3 `Vb ~T0 @X0 0 e@107 ]
-"38441
-[v _RB4 `Vb ~T0 @X0 0 e@108 ]
-"38455
-[v _RB5 `Vb ~T0 @X0 0 e@109 ]
+"38567 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic16f18855.h
+[v _RC5 `Vb ~T0 @X0 0 e@117 ]
+"38581
+[v _RC6 `Vb ~T0 @X0 0 e@118 ]
+"38525
+[v _RC2 `Vb ~T0 @X0 0 e@114 ]
+"38595
+[v _RC7 `Vb ~T0 @X0 0 e@119 ]
+"38539
+[v _RC3 `Vb ~T0 @X0 0 e@115 ]
+"38553
+[v _RC4 `Vb ~T0 @X0 0 e@116 ]
 [v F14219 `(v ~T0 @X0 1 tf1`ul ]
 "153 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic.h
 [v __delay `JF14219 ~T0 @X0 0 e ]
@@ -13236,58 +13236,58 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;lcd.h: 11: if(a & 1)
 "11
 [e $ ! != & -> _a `i -> 1 `i -> 0 `i 1569  ]
-[; ;lcd.h: 12: RB0 = 1;
+[; ;lcd.h: 12: RC5 = 1;
 "12
-[e = _RB0 -> -> 1 `i `b ]
+[e = _RC5 -> -> 1 `i `b ]
 [e $U 1570  ]
 "13
 [e :U 1569 ]
 [; ;lcd.h: 13: else
-[; ;lcd.h: 14: RB0 = 0;
+[; ;lcd.h: 14: RC5 = 0;
 "14
-[e = _RB0 -> -> 0 `i `b ]
+[e = _RC5 -> -> 0 `i `b ]
 [e :U 1570 ]
 [; ;lcd.h: 16: if(a & 2)
 "16
 [e $ ! != & -> _a `i -> 2 `i -> 0 `i 1571  ]
-[; ;lcd.h: 17: RB1 = 1;
+[; ;lcd.h: 17: RC6 = 1;
 "17
-[e = _RB1 -> -> 1 `i `b ]
+[e = _RC6 -> -> 1 `i `b ]
 [e $U 1572  ]
 "18
 [e :U 1571 ]
 [; ;lcd.h: 18: else
-[; ;lcd.h: 19: RB1 = 0;
+[; ;lcd.h: 19: RC6 = 0;
 "19
-[e = _RB1 -> -> 0 `i `b ]
+[e = _RC6 -> -> 0 `i `b ]
 [e :U 1572 ]
 [; ;lcd.h: 21: if(a & 4)
 "21
 [e $ ! != & -> _a `i -> 4 `i -> 0 `i 1573  ]
-[; ;lcd.h: 22: RB2 = 1;
+[; ;lcd.h: 22: RC2 = 1;
 "22
-[e = _RB2 -> -> 1 `i `b ]
+[e = _RC2 -> -> 1 `i `b ]
 [e $U 1574  ]
 "23
 [e :U 1573 ]
 [; ;lcd.h: 23: else
-[; ;lcd.h: 24: RB2 = 0;
+[; ;lcd.h: 24: RC2 = 0;
 "24
-[e = _RB2 -> -> 0 `i `b ]
+[e = _RC2 -> -> 0 `i `b ]
 [e :U 1574 ]
 [; ;lcd.h: 26: if(a & 8)
 "26
 [e $ ! != & -> _a `i -> 8 `i -> 0 `i 1575  ]
-[; ;lcd.h: 27: RB3 = 1;
+[; ;lcd.h: 27: RC7 = 1;
 "27
-[e = _RB3 -> -> 1 `i `b ]
+[e = _RC7 -> -> 1 `i `b ]
 [e $U 1576  ]
 "28
 [e :U 1575 ]
 [; ;lcd.h: 28: else
-[; ;lcd.h: 29: RB3 = 0;
+[; ;lcd.h: 29: RC7 = 0;
 "29
-[e = _RB3 -> -> 0 `i `b ]
+[e = _RC7 -> -> 0 `i `b ]
 [e :U 1576 ]
 [; ;lcd.h: 30: }
 "30
@@ -13304,21 +13304,21 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _a `uc ~T0 @X0 1 r1 ]
 "32
 [f ]
-[; ;lcd.h: 33: RB4 = 0;
+[; ;lcd.h: 33: RC3 = 0;
 "33
-[e = _RB4 -> -> 0 `i `b ]
+[e = _RC3 -> -> 0 `i `b ]
 [; ;lcd.h: 34: Lcd_Port(a);
 "34
 [e ( _Lcd_Port (1 _a ]
-[; ;lcd.h: 35: RB5 = 1;
+[; ;lcd.h: 35: RC4 = 1;
 "35
-[e = _RB5 -> -> 1 `i `b ]
+[e = _RC4 -> -> 1 `i `b ]
 [; ;lcd.h: 36: _delay((unsigned long)((4)*(32000000/4000.0)));
 "36
 [e ( __delay (1 -> * -> -> 4 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-[; ;lcd.h: 37: RB5 = 0;
+[; ;lcd.h: 37: RC4 = 0;
 "37
-[e = _RB5 -> -> 0 `i `b ]
+[e = _RC4 -> -> 0 `i `b ]
 [; ;lcd.h: 38: }
 "38
 [e :UE 1577 ]
@@ -13489,33 +13489,33 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;lcd.h: 90: y = a&0xF0;
 "90
 [e = _y -> & -> _a `i -> 240 `i `uc ]
-[; ;lcd.h: 91: RB4 = 1;
+[; ;lcd.h: 91: RC3 = 1;
 "91
-[e = _RB4 -> -> 1 `i `b ]
+[e = _RC3 -> -> 1 `i `b ]
 [; ;lcd.h: 92: Lcd_Port(y>>4);
 "92
 [e ( _Lcd_Port (1 -> >> -> _y `i -> 4 `i `uc ]
-[; ;lcd.h: 93: RB5 = 1;
+[; ;lcd.h: 93: RC4 = 1;
 "93
-[e = _RB5 -> -> 1 `i `b ]
+[e = _RC4 -> -> 1 `i `b ]
 [; ;lcd.h: 94: _delay((unsigned long)((40)*(32000000/4000000.0)));
 "94
 [e ( __delay (1 -> * -> -> 40 `i `d / -> -> 32000000 `l `d .4000000.0 `ul ]
-[; ;lcd.h: 95: RB5 = 0;
+[; ;lcd.h: 95: RC4 = 0;
 "95
-[e = _RB5 -> -> 0 `i `b ]
+[e = _RC4 -> -> 0 `i `b ]
 [; ;lcd.h: 96: Lcd_Port(temp);
 "96
 [e ( _Lcd_Port (1 _temp ]
-[; ;lcd.h: 97: RB5 = 1;
+[; ;lcd.h: 97: RC4 = 1;
 "97
-[e = _RB5 -> -> 1 `i `b ]
+[e = _RC4 -> -> 1 `i `b ]
 [; ;lcd.h: 98: _delay((unsigned long)((40)*(32000000/4000000.0)));
 "98
 [e ( __delay (1 -> * -> -> 40 `i `d / -> -> 32000000 `l `d .4000000.0 `ul ]
-[; ;lcd.h: 99: RB5 = 0;
+[; ;lcd.h: 99: RC4 = 0;
 "99
-[e = _RB5 -> -> 0 `i `b ]
+[e = _RC4 -> -> 0 `i `b ]
 [; ;lcd.h: 100: }
 "100
 [e :UE 1584 ]

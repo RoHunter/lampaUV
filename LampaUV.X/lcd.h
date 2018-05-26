@@ -1,10 +1,10 @@
 //LCD Functions Developed by electroSome
-#define RS RB4
-#define EN RB5
-#define D4 RB0
-#define D5 RB1
-#define D6 RB2
-#define D7 RB3
+#define RS RC3
+#define EN RC4
+#define D4 RC5
+#define D5 RC6
+#define D6 RC2
+#define D7 RC7
 
 void Lcd_Port(char a)
 {
