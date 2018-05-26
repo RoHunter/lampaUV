@@ -7,6 +7,26 @@
 
 
 #include <xc.h>
+#include "config.h"
+
+
+void init_int(void)
+{
+
+
+   //TMR0
+    T0CON0=0b00000000;
+    T0CON1=0b01001111;
+    //T0CON1=0b01000000;
+    T0CON0bits.T0EN=0;
+    TMR0L=0X00;
+    TMR0H=0Xf4;/////////rollover when TMR0L hits this value
+    
+    INTCONbits.GIE=1;//general interupts
+    PIE0bits.TMR0IE=1;//tmr0 interupt
+    
+    T0CON0bits.T0EN=1;//tmr0 on
+}
 
 void initial_config()
 {
@@ -26,7 +46,9 @@ void initial_config()
     ANSELB=0X00;
     ANSELC=0X00;
     
+    //LATA=0XFF;
     
+    //LATAbits.LATA5=1;
     TRISBbits.TRISB0=1;
     TRISBbits.TRISB1=1;
     TRISBbits.TRISB2=1;

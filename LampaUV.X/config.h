@@ -37,6 +37,7 @@
 
 // TODO Insert C++ class definitions if appropriate
 void initial_config(void);
+void init_int(void);
 // TODO Insert declarations
 
 // Comment a function and leverage automatic documentation with slash star star
