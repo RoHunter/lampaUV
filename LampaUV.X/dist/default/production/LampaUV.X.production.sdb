@@ -13,7 +13,21 @@
 [v _memcpyee memcpyee `(v  1 e 1 0 ]
 "11 D:\GIT\lampaUV\LampaUV.X\config.c
 [v _initial_config initial_config `(v  1 e 1 0 ]
-"13 D:\GIT\lampaUV\LampaUV.X\main.c
+"9 D:\GIT\lampaUV\LampaUV.X\lcd.h
+[v _Lcd_Port Lcd_Port `(v  1 e 1 0 ]
+"31
+[v _Lcd_Cmd Lcd_Cmd `(v  1 e 1 0 ]
+"40
+[v _Lcd_Clear Lcd_Clear `(i  1 e 2 0 ]
+"46
+[v _Lcd_Set_Cursor Lcd_Set_Cursor `(v  1 e 1 0 ]
+"67
+[v _Lcd_Init Lcd_Init `(v  1 e 1 0 ]
+"86
+[v _Lcd_Write_Char Lcd_Write_Char `(v  1 e 1 0 ]
+"102
+[v _Lcd_Write_String Lcd_Write_String `(v  1 e 1 0 ]
+"16 D:\GIT\lampaUV\LampaUV.X\main.c
 [v _main main `(v  1 e 1 0 ]
 "382 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic16f18855.h
 [v _PORTA PORTA `VEuc  1 e 1 @12 ]
@@ -39,13 +53,91 @@
 [v _ANSELB ANSELB `VEuc  1 e 1 @3907 ]
 "34231
 [v _ANSELC ANSELC `VEuc  1 e 1 @3918 ]
-"13 D:\GIT\lampaUV\LampaUV.X\main.c
+"38385
+"38385
+[v _RB0 RB0 `VEb  1 e 0 @104 ]
+"38399
+[v _RB1 RB1 `VEb  1 e 0 @105 ]
+"38413
+[v _RB2 RB2 `VEb  1 e 0 @106 ]
+"38427
+[v _RB3 RB3 `VEb  1 e 0 @107 ]
+"38441
+[v _RB4 RB4 `VEb  1 e 0 @108 ]
+"38455
+[v _RB5 RB5 `VEb  1 e 0 @109 ]
+"16 D:\GIT\lampaUV\LampaUV.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"31
+"40
 } 0
 "11 D:\GIT\lampaUV\LampaUV.X\config.c
 [v _initial_config initial_config `(v  1 e 1 0 ]
 {
 "29
+} 0
+"102 D:\GIT\lampaUV\LampaUV.X\lcd.h
+[v _Lcd_Write_String Lcd_Write_String `(v  1 e 1 0 ]
+{
+"104
+[v Lcd_Write_String@i i `i  1 a 2 8 ]
+"102
+[v Lcd_Write_String@a a `*.25uc  1 p 2 5 ]
+"107
+} 0
+"86
+[v _Lcd_Write_Char Lcd_Write_Char `(v  1 e 1 0 ]
+{
+[v Lcd_Write_Char@a a `uc  1 a 1 wreg ]
+"88
+[v Lcd_Write_Char@y y `uc  1 a 1 3 ]
+[v Lcd_Write_Char@temp temp `uc  1 a 1 2 ]
+"86
+[v Lcd_Write_Char@a a `uc  1 a 1 wreg ]
+"89
+[v Lcd_Write_Char@a a `uc  1 a 1 4 ]
+"100
+} 0
+"46
+[v _Lcd_Set_Cursor Lcd_Set_Cursor `(v  1 e 1 0 ]
+{
+[v Lcd_Set_Cursor@a a `uc  1 a 1 wreg ]
+"48
+[v Lcd_Set_Cursor@temp temp `uc  1 a 1 9 ]
+[v Lcd_Set_Cursor@y y `uc  1 a 1 8 ]
+[v Lcd_Set_Cursor@z z `uc  1 a 1 7 ]
+"46
+[v Lcd_Set_Cursor@a a `uc  1 a 1 wreg ]
+[v Lcd_Set_Cursor@b b `uc  1 p 1 3 ]
+"49
+[v Lcd_Set_Cursor@a a `uc  1 a 1 6 ]
+"65
+} 0
+"67
+[v _Lcd_Init Lcd_Init `(v  1 e 1 0 ]
+{
+"84
+} 0
+"40
+[v _Lcd_Clear Lcd_Clear `(i  1 e 2 0 ]
+{
+"44
+} 0
+"31
+[v _Lcd_Cmd Lcd_Cmd `(v  1 e 1 0 ]
+{
+[v Lcd_Cmd@a a `uc  1 a 1 wreg ]
+[v Lcd_Cmd@a a `uc  1 a 1 wreg ]
+"33
+[v Lcd_Cmd@a a `uc  1 a 1 2 ]
+"38
+} 0
+"9
+[v _Lcd_Port Lcd_Port `(v  1 e 1 0 ]
+{
+[v Lcd_Port@a a `uc  1 a 1 wreg ]
+[v Lcd_Port@a a `uc  1 a 1 wreg ]
+"11
+[v Lcd_Port@a a `uc  1 a 1 0 ]
+"30
 } 0
