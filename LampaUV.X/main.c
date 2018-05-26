@@ -23,7 +23,7 @@
 
 char buffer_sec[3];//variabila buffer blobal
 char buffer_min[3];//variabila buffer blobal
-int flag=0;
+int flag,idle=0;
 int min,sec=0;
 
 void interrupt timer();
@@ -40,11 +40,11 @@ void main(void) {
     Lcd_Init();//init display
     Lcd_Clear();
     
-    Lcd_Set_Cursor(2,1);
+    Lcd_Set_Cursor(2,7);
     Lcd_Write_String("Idle");
 //Switch=1; 
   
-    LATCbits.LATC1=1;
+    Switch=1;
     
 while(1)
 {
@@ -53,18 +53,36 @@ while(1)
         sprintf(buffer_sec, "%2d", sec);//convert to ascii string
         sprintf(buffer_min, "%2d", min);
 
-        Lcd_Set_Cursor(1,1);//goto to line 1 row 1
+        Lcd_Set_Cursor(1,6);//goto to line 1 row 6
         Lcd_Write_String("  ");
-        Lcd_Set_Cursor(1,1);
+        Lcd_Set_Cursor(1,6);
         Lcd_Write_String(buffer_min);
 
         Lcd_Write_String(":");//separator
 
-        Lcd_Set_Cursor(1,4);
+        Lcd_Set_Cursor(1,9);
         Lcd_Write_String("  ");
-        Lcd_Set_Cursor(1,4);
+        Lcd_Set_Cursor(1,9);
         Lcd_Write_String(buffer_sec);
         }
+    
+  
+    while(idle==1)
+    {
+        
+        Lcd_Set_Cursor(2,7);
+        Lcd_Write_String("     ");
+        Lcd_Set_Cursor(2,7);
+        Lcd_Write_String("Idle");
+        Clock=0;
+        if(Plus==1)
+            idle=0;
+        __delay_ms(100);
+    }
+    
+    
+    
+ 
     
  
     __delay_ms(100);
@@ -74,10 +92,10 @@ while(1)
     if(Stop==1)
     {
         Clock=0;//tmr0 off
-        Lcd_Set_Cursor(2,1);
-        Lcd_Write_String("        ");
-        Lcd_Set_Cursor(2,1);
-        Lcd_Write_String("Stopped");
+        Lcd_Set_Cursor(2,7);
+        Lcd_Write_String("     ");
+        Lcd_Set_Cursor(2,7);
+        Lcd_Write_String("Stop");
         __delay_ms(500);
         Switch=1;
     }
@@ -85,10 +103,10 @@ while(1)
     if(Start==1)
     {
         Clock=1;//tmr0 on
-        Lcd_Set_Cursor(2,1);
-        Lcd_Write_String("        ");
-        Lcd_Set_Cursor(2,1);
-        Lcd_Write_String("Exposing");
+        Lcd_Set_Cursor(2,7);
+        Lcd_Write_String("     ");
+        Lcd_Set_Cursor(2,7);
+        Lcd_Write_String("Start");
         Switch=0;
         __delay_ms(500);
     
@@ -140,13 +158,10 @@ void interrupt timer()
         if(min<0)
         {
         Clock=0;//tmr0 off
-        sec=0;
-        Lcd_Set_Cursor(2,1);
-        Lcd_Write_String("        ");
-        Lcd_Set_Cursor(2,1);
-        Lcd_Write_String("Stopped");
-        __delay_ms(500);
         Switch=1;
+        idle=1;
+        sec=0;
+        min=0;
         }
     }  
     

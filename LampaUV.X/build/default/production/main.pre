@@ -17621,7 +17621,7 @@ Lcd_Cmd(0x08);
 # 24 "main.c"
 char buffer_sec[3];
 char buffer_min[3];
-int flag=0;
+int flag,idle=0;
 int min,sec=0;
 
 void interrupt timer();
@@ -17638,7 +17638,7 @@ init_int();
 Lcd_Init();
 Lcd_Clear();
 
-Lcd_Set_Cursor(2,1);
+Lcd_Set_Cursor(2,7);
 Lcd_Write_String("Idle");
 
 
@@ -17651,20 +17651,34 @@ if(min>=0)
 sprintf(buffer_sec, "%2d", sec);
 sprintf(buffer_min, "%2d", min);
 
-Lcd_Set_Cursor(1,1);
+Lcd_Set_Cursor(1,6);
 Lcd_Write_String("  ");
-Lcd_Set_Cursor(1,1);
+Lcd_Set_Cursor(1,6);
 Lcd_Write_String(buffer_min);
 
 Lcd_Write_String(":");
 
-Lcd_Set_Cursor(1,4);
+Lcd_Set_Cursor(1,9);
 Lcd_Write_String("  ");
-Lcd_Set_Cursor(1,4);
+Lcd_Set_Cursor(1,9);
 Lcd_Write_String(buffer_sec);
 }
 
 
+while(idle==1)
+{
+
+Lcd_Set_Cursor(2,7);
+Lcd_Write_String("     ");
+Lcd_Set_Cursor(2,7);
+Lcd_Write_String("Idle");
+T0CON0bits.T0EN=0;
+if(RB0==1)
+idle=0;
+_delay((unsigned long)((100)*(32000000/4000.0)));
+}
+
+# 88
 _delay((unsigned long)((100)*(32000000/4000.0)));
 
 
@@ -17672,10 +17686,10 @@ _delay((unsigned long)((100)*(32000000/4000.0)));
 if(RB3==1)
 {
 T0CON0bits.T0EN=0;
-Lcd_Set_Cursor(2,1);
-Lcd_Write_String("        ");
-Lcd_Set_Cursor(2,1);
-Lcd_Write_String("Stopped");
+Lcd_Set_Cursor(2,7);
+Lcd_Write_String("     ");
+Lcd_Set_Cursor(2,7);
+Lcd_Write_String("Stop");
 _delay((unsigned long)((500)*(32000000/4000.0)));
 LATCbits.LATC1=1;
 }
@@ -17683,10 +17697,10 @@ LATCbits.LATC1=1;
 if(RB2==1)
 {
 T0CON0bits.T0EN=1;
-Lcd_Set_Cursor(2,1);
-Lcd_Write_String("        ");
-Lcd_Set_Cursor(2,1);
-Lcd_Write_String("Exposing");
+Lcd_Set_Cursor(2,7);
+Lcd_Write_String("     ");
+Lcd_Set_Cursor(2,7);
+Lcd_Write_String("Start");
 LATCbits.LATC1=0;
 _delay((unsigned long)((500)*(32000000/4000.0)));
 
@@ -17738,13 +17752,10 @@ min--;
 if(min<0)
 {
 T0CON0bits.T0EN=0;
-sec=0;
-Lcd_Set_Cursor(2,1);
-Lcd_Write_String("        ");
-Lcd_Set_Cursor(2,1);
-Lcd_Write_String("Stopped");
-_delay((unsigned long)((500)*(32000000/4000.0)));
 LATCbits.LATC1=1;
+idle=1;
+sec=0;
+min=0;
 }
 }
 
