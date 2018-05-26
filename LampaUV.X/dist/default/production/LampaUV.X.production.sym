@@ -1,12 +1,12 @@
 __size_of_Lcd_Cmd 0 0 ABS 0
 __CFG_WDTCCS$SC 0 0 ABS 0
 __CFG_WRT$OFF 0 0 ABS 0
-_RB0 68 0 ABS 0
-_RB1 69 0 ABS 0
-_RB2 6A 0 ABS 0
-_RB3 6B 0 ABS 0
-_RB4 6C 0 ABS 0
-_RB5 6D 0 ABS 0
+_RC2 72 0 ABS 0
+_RC3 73 0 ABS 0
+_RC4 74 0 ABS 0
+_RC5 75 0 ABS 0
+_RC6 76 0 ABS 0
+_RC7 77 0 ABS 0
 __S0 800C 0 ABS 0
 __S1 7B 0 ABS 0
 __S2 0 0 ABS 0
@@ -311,7 +311,7 @@ stringtext1 1000 1017 STRCODE 1000 0
 text6 DAA DB9 CODE DAA 0
 %locals
 dist/default/production\LampaUV.X.production.obj
-C:\Users\georg\AppData\Local\Temp\s9cg.
+C:\Users\georg\AppData\Local\Temp\s834.
 2213 7FD 0 CODE 0
 2216 7FD 0 CODE 0
 2222 7FD 0 CODE 0

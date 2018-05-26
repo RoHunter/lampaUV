@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\georg\AppData\Local\Temp\s9cg.obj
+$C:\Users\georg\AppData\Local\Temp\s834.obj
 reset_vec CODE 0 0 0 2 2
 end_init CODE 0 2 2 2 2
 config CONFIG 0 8007 8007 5 2
@@ -121,11 +121,11 @@ STRING 80C-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\LampaUV.X.production.obj
-7FD cinit CODE >2213:C:\Users\georg\AppData\Local\Temp\s9cg.
-7FD cinit CODE >2216:C:\Users\georg\AppData\Local\Temp\s9cg.
-7FD cinit CODE >2222:C:\Users\georg\AppData\Local\Temp\s9cg.
-7FD cinit CODE >2224:C:\Users\georg\AppData\Local\Temp\s9cg.
-7FE cinit CODE >2225:C:\Users\georg\AppData\Local\Temp\s9cg.
+7FD cinit CODE >2213:C:\Users\georg\AppData\Local\Temp\s834.
+7FD cinit CODE >2216:C:\Users\georg\AppData\Local\Temp\s834.
+7FD cinit CODE >2222:C:\Users\georg\AppData\Local\Temp\s834.
+7FD cinit CODE >2224:C:\Users\georg\AppData\Local\Temp\s834.
+7FE cinit CODE >2225:C:\Users\georg\AppData\Local\Temp\s834.
 6FF text8 CODE >9:D:\GIT\lampaUV\LampaUV.X\lcd.h
 700 text8 CODE >11:D:\GIT\lampaUV\LampaUV.X\lcd.h
 702 text8 CODE >12:D:\GIT\lampaUV\LampaUV.X\lcd.h
@@ -252,23 +252,23 @@ __CFG_WDTCCS$SC 0 0 ABS 0 - dist/default/production\LampaUV.X.production.obj
 _LATA 16 0 ABS 0 - dist/default/production\LampaUV.X.production.obj
 _LATB 17 0 ABS 0 - dist/default/production\LampaUV.X.production.obj
 _LATC 18 0 ABS 0 - dist/default/production\LampaUV.X.production.obj
-___sp 0 0 STACK 2 stack C:\Users\georg\AppData\Local\Temp\s9cg.obj
+___sp 0 0 STACK 2 stack C:\Users\georg\AppData\Local\Temp\s834.obj
 _main E62 0 CODE 0 maintext dist/default/production\LampaUV.X.production.obj
 btemp 7E 0 ABS 0 - dist/default/production\LampaUV.X.production.obj
 _Lcd_Write_Char EA0 0 CODE 0 text3 dist/default/production\LampaUV.X.production.obj
-start 4 0 CODE 0 init C:\Users\georg\AppData\Local\Temp\s9cg.obj
+start 4 0 CODE 0 init C:\Users\georg\AppData\Local\Temp\s834.obj
 __CFG_BOREN$OFF 0 0 ABS 0 - dist/default/production\LampaUV.X.production.obj
 __size_of_main 0 0 ABS 0 - dist/default/production\LampaUV.X.production.obj
 _initial_config DBA 0 CODE 0 text1 dist/default/production\LampaUV.X.production.obj
 Lcd_Port@a 70 0 COMMON 1 cstackCOMMON dist/default/production\LampaUV.X.production.obj
 Lcd_Write_Char@temp 72 0 COMMON 1 cstackCOMMON dist/default/production\LampaUV.X.production.obj
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\georg\AppData\Local\Temp\s9cg.obj
-intlevel1 0 0 ENTRY 0 functab C:\Users\georg\AppData\Local\Temp\s9cg.obj
-intlevel2 0 0 ENTRY 0 functab C:\Users\georg\AppData\Local\Temp\s9cg.obj
-intlevel3 0 0 ENTRY 0 functab C:\Users\georg\AppData\Local\Temp\s9cg.obj
-intlevel4 0 0 ENTRY 0 functab C:\Users\georg\AppData\Local\Temp\s9cg.obj
-intlevel5 0 0 ENTRY 0 functab C:\Users\georg\AppData\Local\Temp\s9cg.obj
+intlevel0 0 0 ENTRY 0 functab C:\Users\georg\AppData\Local\Temp\s834.obj
+intlevel1 0 0 ENTRY 0 functab C:\Users\georg\AppData\Local\Temp\s834.obj
+intlevel2 0 0 ENTRY 0 functab C:\Users\georg\AppData\Local\Temp\s834.obj
+intlevel3 0 0 ENTRY 0 functab C:\Users\georg\AppData\Local\Temp\s834.obj
+intlevel4 0 0 ENTRY 0 functab C:\Users\georg\AppData\Local\Temp\s834.obj
+intlevel5 0 0 ENTRY 0 functab C:\Users\georg\AppData\Local\Temp\s834.obj
 wtemp0 7E 0 ABS 0 - dist/default/production\LampaUV.X.production.obj
 __Hfunctab 0 0 ENTRY 0 functab -
 __size_of_Lcd_Set_Cursor 0 0 ABS 0 - dist/default/production\LampaUV.X.production.obj
@@ -289,7 +289,7 @@ __CFG_STVREN$OFF 0 0 ABS 0 - dist/default/production\LampaUV.X.production.obj
 _Lcd_Write_String E2E 0 CODE 0 text2 dist/default/production\LampaUV.X.production.obj
 __CFG_RSTOSC$HFINTPLL 0 0 ABS 0 - dist/default/production\LampaUV.X.production.obj
 __size_of_Lcd_Cmd 0 0 ABS 0 - dist/default/production\LampaUV.X.production.obj
-___int_sp 0 0 STACK 2 stack C:\Users\georg\AppData\Local\Temp\s9cg.obj
+___int_sp 0 0 STACK 2 stack C:\Users\georg\AppData\Local\Temp\s834.obj
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -418,12 +418,12 @@ __pstringtext1 1000 0 STRCODE 0 stringtext1 dist/default/production\LampaUV.X.pr
 __pstringtext2 0 0 STRCODE 0 stringtext2 dist/default/production\LampaUV.X.production.obj
 __CFG_WDTCWS$WDTCWS_7 0 0 ABS 0 - dist/default/production\LampaUV.X.production.obj
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-_RB0 68 0 ABS 0 - dist/default/production\LampaUV.X.production.obj
-_RB1 69 0 ABS 0 - dist/default/production\LampaUV.X.production.obj
-_RB2 6A 0 ABS 0 - dist/default/production\LampaUV.X.production.obj
-_RB3 6B 0 ABS 0 - dist/default/production\LampaUV.X.production.obj
-_RB4 6C 0 ABS 0 - dist/default/production\LampaUV.X.production.obj
-_RB5 6D 0 ABS 0 - dist/default/production\LampaUV.X.production.obj
+_RC2 72 0 ABS 0 - dist/default/production\LampaUV.X.production.obj
+_RC3 73 0 ABS 0 - dist/default/production\LampaUV.X.production.obj
+_RC4 74 0 ABS 0 - dist/default/production\LampaUV.X.production.obj
+_RC5 75 0 ABS 0 - dist/default/production\LampaUV.X.production.obj
+_RC6 76 0 ABS 0 - dist/default/production\LampaUV.X.production.obj
+_RC7 77 0 ABS 0 - dist/default/production\LampaUV.X.production.obj
 __S0 800C 0 ABS 0 - -
 __S1 7B 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
@@ -434,7 +434,7 @@ __Lintentry 4 0 CODE 0 intentry -
 __size_of_Lcd_Write_String 0 0 ABS 0 - dist/default/production\LampaUV.X.production.obj
 Lcd_Write_String@a 75 0 COMMON 1 cstackCOMMON dist/default/production\LampaUV.X.production.obj
 Lcd_Write_String@i 78 0 COMMON 1 cstackCOMMON dist/default/production\LampaUV.X.production.obj
-reset_vec 0 0 CODE 0 reset_vec C:\Users\georg\AppData\Local\Temp\s9cg.obj
+reset_vec 0 0 CODE 0 reset_vec C:\Users\georg\AppData\Local\Temp\s834.obj
 __size_of_Lcd_Clear 0 0 ABS 0 - dist/default/production\LampaUV.X.production.obj
 __end_of_Lcd_Cmd DFE 0 CODE 0 text7 dist/default/production\LampaUV.X.production.obj
 __Lstringtext1 0 0 ABS 0 stringtext1 -
@@ -472,8 +472,8 @@ __Lcommon 0 0 ABS 0 common -
 __Lconfig 1000E 0 CONFIG 0 config -
 __CFG_CP$OFF 0 0 ABS 0 - dist/default/production\LampaUV.X.production.obj
 __CFG_WDTE$OFF 0 0 ABS 0 - dist/default/production\LampaUV.X.production.obj
-stackhi 23EF 0 ABS 0 - C:\Users\georg\AppData\Local\Temp\s9cg.obj
-stacklo 2000 0 ABS 0 - C:\Users\georg\AppData\Local\Temp\s9cg.obj
+stackhi 23EF 0 ABS 0 - C:\Users\georg\AppData\Local\Temp\s834.obj
+stacklo 2000 0 ABS 0 - C:\Users\georg\AppData\Local\Temp\s834.obj
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -

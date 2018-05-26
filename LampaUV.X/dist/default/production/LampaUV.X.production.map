@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files (x86)\Microchip\xc8\v1.45\dat\en_msgs.txt -cs \
   -h+dist/default/production\LampaUV.X.production.sym \
   --cmf=dist/default/production\LampaUV.X.production.cmf -z -Q16F18855 \
-  -oC:\Users\georg\AppData\Local\Temp\s9cg.2 \
+  -oC:\Users\georg\AppData\Local\Temp\s834.2 \
   -Mdist/default/production/LampaUV.X.production.map -E1 -ver=XC8 \
   -ASTACK=02000h-023efh -pstack=STACK -ACODE=00h-07FFhx4 \
   -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 -ACONST=00h-0FFhx32 \
@@ -32,7 +32,7 @@ Linker command line:
   -DCONFIG=2 -AIDLOC=08000h-08003h -pidloc=IDLOC -DIDLOC=2 \
   -AEEDATA=00h-0FFh/0F000h -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 \
   -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 -k \
-  C:\Users\georg\AppData\Local\Temp\s9cg.obj \
+  C:\Users\georg\AppData\Local\Temp\s834.obj \
   dist/default/production\LampaUV.X.production.obj 
 
 Object code version is 3.11
@@ -42,7 +42,7 @@ Machine type is 16F18855
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\georg\AppData\Local\Temp\s9cg.obj
+C:\Users\georg\AppData\Local\Temp\s834.obj
                 end_init                              2        2        2        0       0
                 reset_vec                             0        0        2        0       0
                 config                             8007     8007        5    1000E       0
@@ -358,12 +358,12 @@ _Lcd_Write_String          text2        00717
 _PORTA                     (abs)        0000C
 _PORTB                     (abs)        0000D
 _PORTC                     (abs)        0000E
-_RB0                       (abs)        00068
-_RB1                       (abs)        00069
-_RB2                       (abs)        0006A
-_RB3                       (abs)        0006B
-_RB4                       (abs)        0006C
-_RB5                       (abs)        0006D
+_RC2                       (abs)        00072
+_RC3                       (abs)        00073
+_RC4                       (abs)        00074
+_RC5                       (abs)        00075
+_RC6                       (abs)        00076
+_RC7                       (abs)        00077
 _TRISA                     (abs)        00011
 _TRISB                     (abs)        00012
 _TRISC                     (abs)        00013

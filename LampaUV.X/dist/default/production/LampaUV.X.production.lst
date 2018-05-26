@@ -1,7 +1,7 @@
 
 
 Microchip Technology PIC LITE Macro Assembler V1.45 build -152302408 
-                                                                                               Sat May 26 10:12:36 2018
+                                                                                               Sat May 26 11:03:04 2018
 
 Microchip Technology Omniscient Code Generator v1.45 (Free mode) build 201711160504
      1                           	processor	16F18855
@@ -1105,12 +1105,12 @@ Microchip Technology Omniscient Code Generator v1.45 (Free mode) build 201711160
   1091  0013                     _TRISC	set	19
   1092  0012                     _TRISB	set	18
   1093  0011                     _TRISA	set	17
-  1094  006D                     _RB5	set	109
-  1095  006C                     _RB4	set	108
-  1096  006B                     _RB3	set	107
-  1097  006A                     _RB2	set	106
-  1098  0069                     _RB1	set	105
-  1099  0068                     _RB0	set	104
+  1094  0074                     _RC4	set	116
+  1095  0073                     _RC3	set	115
+  1096  0077                     _RC7	set	119
+  1097  0072                     _RC2	set	114
+  1098  0076                     _RC6	set	118
+  1099  0075                     _RC5	set	117
   1100  0F4E                     _ANSELC	set	3918
   1101  0F43                     _ANSELB	set	3907
   1102  0F38                     _ANSELA	set	3896
@@ -1561,9 +1561,9 @@ Microchip Technology Omniscient Code Generator v1.45 (Free mode) build 201711160
   1527  0759  0871               	movf	??_Lcd_Write_Char,w
   1528  075A  00F3               	movwf	Lcd_Write_Char@y
   1529                           
-  1530                           ;lcd.h: 91: RB4 = 1;
+  1530                           ;lcd.h: 91: RC3 = 1;
   1531  075B  0020               	movlb	0	; select bank0
-  1532  075C  160D               	bsf	13,4	;volatile
+  1532  075C  158E               	bsf	14,3	;volatile
   1533                           
   1534                           ;lcd.h: 92: Lcd_Port(y>>4);
   1535  075D  0873               	movf	Lcd_Write_Char@y,w
@@ -1576,9 +1576,9 @@ Microchip Technology Omniscient Code Generator v1.45 (Free mode) build 201711160
   1542  0763  0871               	movf	??_Lcd_Write_Char,w
   1543  0764  3186  26FF  3187   	fcall	_Lcd_Port
   1544                           
-  1545                           ;lcd.h: 93: RB5 = 1;
+  1545                           ;lcd.h: 93: RC4 = 1;
   1546  0767  0020               	movlb	0	; select bank0
-  1547  0768  168D               	bsf	13,5	;volatile
+  1547  0768  160E               	bsf	14,4	;volatile
   1548                           
   1549                           ;lcd.h: 94: _delay((unsigned long)((40)*(32000000/4000000.0)));
   1550  0769  306A               	movlw	106
@@ -1587,17 +1587,17 @@ Microchip Technology Omniscient Code Generator v1.45 (Free mode) build 201711160
   1553  076B  2F6A               	goto	u177
   1554  076C  3200               	nop2
   1555                           
-  1556                           ;lcd.h: 95: RB5 = 0;
+  1556                           ;lcd.h: 95: RC4 = 0;
   1557  076D  0020               	movlb	0	; select bank0
-  1558  076E  128D               	bcf	13,5	;volatile
+  1558  076E  120E               	bcf	14,4	;volatile
   1559                           
   1560                           ;lcd.h: 96: Lcd_Port(temp);
   1561  076F  0872               	movf	Lcd_Write_Char@temp,w
   1562  0770  3186  26FF  3187   	fcall	_Lcd_Port
   1563                           
-  1564                           ;lcd.h: 97: RB5 = 1;
+  1564                           ;lcd.h: 97: RC4 = 1;
   1565  0773  0020               	movlb	0	; select bank0
-  1566  0774  168D               	bsf	13,5	;volatile
+  1566  0774  160E               	bsf	14,4	;volatile
   1567                           
   1568                           ;lcd.h: 98: _delay((unsigned long)((40)*(32000000/4000000.0)));
   1569  0775  306A               	movlw	106
@@ -1606,9 +1606,9 @@ Microchip Technology Omniscient Code Generator v1.45 (Free mode) build 201711160
   1572  0777  2F76               	goto	u187
   1573  0778  3200               	nop2
   1574                           
-  1575                           ;lcd.h: 99: RB5 = 0;
+  1575                           ;lcd.h: 99: RC4 = 0;
   1576  0779  0020               	movlb	0	; select bank0
-  1577  077A  128D               	bcf	13,5	;volatile
+  1577  077A  120E               	bcf	14,4	;volatile
   1578  077B  0008               	return
   1579  077C                     __end_of_Lcd_Write_Char:	
   1580                           
@@ -1977,17 +1977,17 @@ Microchip Technology Omniscient Code Generator v1.45 (Free mode) build 201711160
   1923                           ;Lcd_Cmd@a stored from wreg
   1924  06EC  00F2               	movwf	Lcd_Cmd@a
   1925                           
-  1926                           ;lcd.h: 33: RB4 = 0;
+  1926                           ;lcd.h: 33: RC3 = 0;
   1927  06ED  0020               	movlb	0	; select bank0
-  1928  06EE  120D               	bcf	13,4	;volatile
+  1928  06EE  118E               	bcf	14,3	;volatile
   1929                           
   1930                           ;lcd.h: 34: Lcd_Port(a);
   1931  06EF  0872               	movf	Lcd_Cmd@a,w
   1932  06F0  3186  26FF  3186   	fcall	_Lcd_Port
   1933                           
-  1934                           ;lcd.h: 35: RB5 = 1;
+  1934                           ;lcd.h: 35: RC4 = 1;
   1935  06F3  0020               	movlb	0	; select bank0
-  1936  06F4  168D               	bsf	13,5	;volatile
+  1936  06F4  160E               	bsf	14,4	;volatile
   1937                           
   1938                           ;lcd.h: 36: _delay((unsigned long)((4)*(32000000/4000.0)));
   1939  06F5  302A               	movlw	42
@@ -1999,9 +1999,9 @@ Microchip Technology Omniscient Code Generator v1.45 (Free mode) build 201711160
   1945  06FA  0BF1               	decfsz	??_Lcd_Cmd,f
   1946  06FB  2EF8               	goto	u227
   1947                           
-  1948                           ;lcd.h: 37: RB5 = 0;
+  1948                           ;lcd.h: 37: RC4 = 0;
   1949  06FC  0020               	movlb	0	; select bank0
-  1950  06FD  128D               	bcf	13,5	;volatile
+  1950  06FD  120E               	bcf	14,4	;volatile
   1951  06FE  0008               	return
   1952  06FF                     __end_of_Lcd_Cmd:	
   1953                           
@@ -2056,58 +2056,58 @@ Microchip Technology Omniscient Code Generator v1.45 (Free mode) build 201711160
   1997  0700  1C70               	btfss	Lcd_Port@a,0
   1998  0701  2F05               	goto	l19
   1999                           
-  2000                           ;lcd.h: 12: RB0 = 1;
+  2000                           ;lcd.h: 12: RC5 = 1;
   2001  0702  0020               	movlb	0	; select bank0
-  2002  0703  140D               	bsf	13,0	;volatile
+  2002  0703  168E               	bsf	14,5	;volatile
   2003  0704  2F07               	goto	l554
   2004  0705                     l19:	
   2005                           
   2006                           ;lcd.h: 13: else
-  2007                           ;lcd.h: 14: RB0 = 0;
+  2007                           ;lcd.h: 14: RC5 = 0;
   2008  0705  0020               	movlb	0	; select bank0
-  2009  0706  100D               	bcf	13,0	;volatile
+  2009  0706  128E               	bcf	14,5	;volatile
   2010  0707                     l554:	
   2011                           
   2012                           ;lcd.h: 16: if(a & 2)
   2013  0707  1CF0               	btfss	Lcd_Port@a,1
   2014  0708  2F0B               	goto	l21
   2015                           
-  2016                           ;lcd.h: 17: RB1 = 1;
-  2017  0709  148D               	bsf	13,1	;volatile
+  2016                           ;lcd.h: 17: RC6 = 1;
+  2017  0709  170E               	bsf	14,6	;volatile
   2018  070A  2F0C               	goto	l558
   2019  070B                     l21:	
   2020                           
   2021                           ;lcd.h: 18: else
-  2022                           ;lcd.h: 19: RB1 = 0;
-  2023  070B  108D               	bcf	13,1	;volatile
+  2022                           ;lcd.h: 19: RC6 = 0;
+  2023  070B  130E               	bcf	14,6	;volatile
   2024  070C                     l558:	
   2025                           
   2026                           ;lcd.h: 21: if(a & 4)
   2027  070C  1D70               	btfss	Lcd_Port@a,2
   2028  070D  2F10               	goto	l23
   2029                           
-  2030                           ;lcd.h: 22: RB2 = 1;
-  2031  070E  150D               	bsf	13,2	;volatile
+  2030                           ;lcd.h: 22: RC2 = 1;
+  2031  070E  150E               	bsf	14,2	;volatile
   2032  070F  2F11               	goto	l562
   2033  0710                     l23:	
   2034                           
   2035                           ;lcd.h: 23: else
-  2036                           ;lcd.h: 24: RB2 = 0;
-  2037  0710  110D               	bcf	13,2	;volatile
+  2036                           ;lcd.h: 24: RC2 = 0;
+  2037  0710  110E               	bcf	14,2	;volatile
   2038  0711                     l562:	
   2039                           
   2040                           ;lcd.h: 26: if(a & 8)
   2041  0711  1DF0               	btfss	Lcd_Port@a,3
   2042  0712  2F15               	goto	l25
   2043                           
-  2044                           ;lcd.h: 27: RB3 = 1;
-  2045  0713  158D               	bsf	13,3	;volatile
+  2044                           ;lcd.h: 27: RC7 = 1;
+  2045  0713  178E               	bsf	14,7	;volatile
   2046  0714  0008               	return
   2047  0715                     l25:	
   2048                           
   2049                           ;lcd.h: 28: else
-  2050                           ;lcd.h: 29: RB3 = 0;
-  2051  0715  118D               	bcf	13,3	;volatile
+  2050                           ;lcd.h: 29: RC7 = 0;
+  2051  0715  138E               	bcf	14,7	;volatile
   2052  0716  0008               	return
   2053  0717                     __end_of_Lcd_Port:	
   2054  007E                     btemp	set	126	;btemp
@@ -2375,15 +2375,15 @@ SFR31                0      0       0      32        0.0%
 
 
 Microchip Technology PIC Macro Assembler V1.45 build -152302408 
-Symbol Table                                                                                   Sat May 26 10:12:36 2018
+Symbol Table                                                                                   Sat May 26 11:03:04 2018
 
               __CFG_CP$OFF 0000                         l21 070B                         l23 0710  
                        l25 0715                         l19 0705                         u55 0760  
               __CFG_LVP$ON 0000                        l562 0711                        l554 0707  
                       l558 070C                        l664 079C                        l680 0719  
-                      l692 0747                        _RB0 0068                        _RB1 0069  
-                      _RB2 006A                        _RB3 006B                        _RB4 006C  
-                      _RB5 006D                        u125 0788                        u207 07CE  
+                      l692 0747                        _RC2 0072                        _RC3 0073  
+                      _RC4 0074                        _RC5 0075                        _RC6 0076  
+                      _RC7 0077                        u125 0788                        u207 07CE  
                       u217 07D9                        u145 07A8                        u227 06F8  
                       u167 074A                        u177 076A               __CFG_CPD$OFF 0000  
                       u187 0776                        u197 07C3               __CFG_BORV$LO 0000  

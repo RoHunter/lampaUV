@@ -53,19 +53,19 @@
 [v _ANSELB ANSELB `VEuc  1 e 1 @3907 ]
 "34231
 [v _ANSELC ANSELC `VEuc  1 e 1 @3918 ]
-"38385
-"38385
-[v _RB0 RB0 `VEb  1 e 0 @104 ]
-"38399
-[v _RB1 RB1 `VEb  1 e 0 @105 ]
-"38413
-[v _RB2 RB2 `VEb  1 e 0 @106 ]
-"38427
-[v _RB3 RB3 `VEb  1 e 0 @107 ]
-"38441
-[v _RB4 RB4 `VEb  1 e 0 @108 ]
-"38455
-[v _RB5 RB5 `VEb  1 e 0 @109 ]
+"38525
+"38525
+[v _RC2 RC2 `VEb  1 e 0 @114 ]
+"38539
+[v _RC3 RC3 `VEb  1 e 0 @115 ]
+"38553
+[v _RC4 RC4 `VEb  1 e 0 @116 ]
+"38567
+[v _RC5 RC5 `VEb  1 e 0 @117 ]
+"38581
+[v _RC6 RC6 `VEb  1 e 0 @118 ]
+"38595
+[v _RC7 RC7 `VEb  1 e 0 @119 ]
 "16 D:\GIT\lampaUV\LampaUV.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
