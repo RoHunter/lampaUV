@@ -17618,15 +17618,18 @@ Lcd_Cmd(0x01);
 Lcd_Cmd(0x08);
 }
 
-# 22 "main.c"
-char buffer[5];
+# 24 "main.c"
+char buffer_sec[3];
+char buffer_min[3];
 int flag=0;
+int min,sec=0;
 
 void interrupt timer();
 
 void main(void) {
 
-
+sec=0;
+min=0;
 int counter=0;
 
 initial_config();
@@ -17635,27 +17638,40 @@ init_int();
 Lcd_Init();
 Lcd_Clear();
 
-Lcd_Set_Cursor(1,1);
-Lcd_Write_String("Hello World");
+Lcd_Set_Cursor(2,1);
+Lcd_Write_String("Idle");
 
 
 LATCbits.LATC1=1;
 
 while(1)
 {
+if(min>=0)
+{
+sprintf(buffer_sec, "%2d", sec);
+sprintf(buffer_min, "%2d", min);
 
-sprintf(buffer, "%d", counter);
 Lcd_Set_Cursor(1,1);
-Lcd_Write_String("           ");
+Lcd_Write_String("  ");
 Lcd_Set_Cursor(1,1);
-Lcd_Write_String(buffer);
-_delay((unsigned long)((1000)*(32000000/4000.0)));
-counter++;
+Lcd_Write_String(buffer_min);
+
+Lcd_Write_String(":");
+
+Lcd_Set_Cursor(1,4);
+Lcd_Write_String("  ");
+Lcd_Set_Cursor(1,4);
+Lcd_Write_String(buffer_sec);
+}
+
+
+_delay((unsigned long)((100)*(32000000/4000.0)));
 
 
 
 if(RB3==1)
 {
+T0CON0bits.T0EN=0;
 Lcd_Set_Cursor(2,1);
 Lcd_Write_String("        ");
 Lcd_Set_Cursor(2,1);
@@ -17666,6 +17682,7 @@ LATCbits.LATC1=1;
 
 if(RB2==1)
 {
+T0CON0bits.T0EN=1;
 Lcd_Set_Cursor(2,1);
 Lcd_Write_String("        ");
 Lcd_Set_Cursor(2,1);
@@ -17673,6 +17690,23 @@ Lcd_Write_String("Exposing");
 LATCbits.LATC1=0;
 _delay((unsigned long)((500)*(32000000/4000.0)));
 
+}
+
+if(RB0==1)
+{
+min++;
+_delay((unsigned long)((100)*(32000000/4000.0)));
+}
+
+if(RB1==1)
+{
+min--;
+if(min<0)
+{
+min=0;
+sec=0;
+}
+_delay((unsigned long)((100)*(32000000/4000.0)));
 }
 
 }
@@ -17695,8 +17729,27 @@ LATAbits.LATA5=0;
 flag=0;
 break;
 }
+sec--;
+
+if(sec<0)
+{
+sec=59;
+min--;
+if(min<0)
+{
+T0CON0bits.T0EN=0;
+sec=0;
+Lcd_Set_Cursor(2,1);
+Lcd_Write_String("        ");
+Lcd_Set_Cursor(2,1);
+Lcd_Write_String("Stopped");
+_delay((unsigned long)((500)*(32000000/4000.0)));
+LATCbits.LATC1=1;
+}
+}
 
 TMR0L=0X00;
+if(min>=0)
 T0CON0bits.T0EN=1;
 
 }

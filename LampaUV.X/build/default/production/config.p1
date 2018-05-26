@@ -13167,18 +13167,18 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;config.c: 22: TMR0L=0X00;
 "22
 [e = _TMR0L -> -> 0 `i `uc ]
-[; ;config.c: 23: TMR0H=0Xf4;
+[; ;config.c: 23: TMR0H=0Xf3;
 "23
-[e = _TMR0H -> -> 244 `i `uc ]
+[e = _TMR0H -> -> 243 `i `uc ]
 [; ;config.c: 25: INTCONbits.GIE=1;
 "25
 [e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
 [; ;config.c: 26: PIE0bits.TMR0IE=1;
 "26
 [e = . . _PIE0bits 0 3 -> -> 1 `i `uc ]
-[; ;config.c: 28: T0CON0bits.T0EN=1;
+[; ;config.c: 28: T0CON0bits.T0EN=0;
 "28
-[e = . . _T0CON0bits 0 4 -> -> 1 `i `uc ]
+[e = . . _T0CON0bits 0 4 -> -> 0 `i `uc ]
 [; ;config.c: 29: }
 "29
 [e :UE 1563 ]

@@ -20,12 +20,12 @@ void init_int(void)
     //T0CON1=0b01000000;
     T0CON0bits.T0EN=0;
     TMR0L=0X00;
-    TMR0H=0Xf4;/////////rollover when TMR0L hits this value
+    TMR0H=0Xf3;/////////rollover when TMR0L hits this value
     
     INTCONbits.GIE=1;//general interupts
     PIE0bits.TMR0IE=1;//tmr0 interupt
     
-    T0CON0bits.T0EN=1;//tmr0 on
+    T0CON0bits.T0EN=0;//tmr0 off
 }
 
 void initial_config()
