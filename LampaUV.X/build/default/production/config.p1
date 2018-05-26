@@ -23,6 +23,14 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _ANSELB `Vuc ~T0 @X0 0 e@3907 ]
 "34231
 [v _ANSELC `Vuc ~T0 @X0 0 e@3918 ]
+"657
+[s S38 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S38 . TRISB0 TRISB1 TRISB2 TRISB3 TRISB4 TRISB5 TRISB6 TRISB7 ]
+"656
+[u S37 `S38 1 ]
+[n S37 . . ]
+"668
+[v _TRISBbits `VS37 ~T0 @X0 0 e@18 ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -13146,7 +13154,19 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;config.c: 27: ANSELC=0X00;
 "27
 [e = _ANSELC -> -> 0 `i `uc ]
-[; ;config.c: 29: }
-"29
+[; ;config.c: 30: TRISBbits.TRISB0=1;
+"30
+[e = . . _TRISBbits 0 0 -> -> 1 `i `uc ]
+[; ;config.c: 31: TRISBbits.TRISB1=1;
+"31
+[e = . . _TRISBbits 0 1 -> -> 1 `i `uc ]
+[; ;config.c: 32: TRISBbits.TRISB2=1;
+"32
+[e = . . _TRISBbits 0 2 -> -> 1 `i `uc ]
+[; ;config.c: 33: TRISBbits.TRISB3=1;
+"33
+[e = . . _TRISBbits 0 3 -> -> 1 `i `uc ]
+[; ;config.c: 34: }
+"34
 [e :UE 1563 ]
 }

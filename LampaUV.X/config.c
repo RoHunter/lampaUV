@@ -25,5 +25,10 @@ void initial_config()
     ANSELA=0X00;
     ANSELB=0X00;
     ANSELC=0X00;
-
+    
+    
+    TRISBbits.TRISB0=1;
+    TRISBbits.TRISB1=1;
+    TRISBbits.TRISB2=1;
+    TRISBbits.TRISB3=1;
 }

@@ -17617,7 +17617,7 @@ Lcd_Cmd(0x01);
 Lcd_Cmd(0x08);
 }
 
-# 16 "main.c"
+# 21 "main.c"
 void main(void) {
 
 initial_config();
@@ -17632,9 +17632,41 @@ Lcd_Write_String("Hello World");
 while(1)
 {
 
-# 36
-_delay((unsigned long)((1)*(32000000/4000.0)));
+if(RB2==1)
+{
+Lcd_Clear();
+Lcd_Set_Cursor(1,1);
+Lcd_Write_String("Start");
+_delay((unsigned long)((1000)*(32000000/4000.0)));
+}
 
+if(RB3==1)
+{
+Lcd_Clear();
+Lcd_Set_Cursor(1,1);
+Lcd_Write_String("Stop");
+_delay((unsigned long)((1000)*(32000000/4000.0)));
+}
 
+if(RB1==1)
+{
+Lcd_Clear();
+Lcd_Set_Cursor(1,1);
+Lcd_Write_String("Minus");
+_delay((unsigned long)((1000)*(32000000/4000.0)));
+}
+
+if(RB0==1)
+{
+Lcd_Clear();
+Lcd_Set_Cursor(1,1);
+Lcd_Write_String("Plus");
+_delay((unsigned long)((1000)*(32000000/4000.0)));
+}
+
+Lcd_Clear();
+Lcd_Set_Cursor(1,1);
+Lcd_Write_String("Main");
+_delay((unsigned long)((1000)*(32000000/4000.0)));
 }
 }
