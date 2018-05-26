@@ -1,5 +1,5 @@
 
-# 1 "main.c"
+# 1 "config.c"
 
 # 26 "C:\Program Files (x86)\Microchip\xc8\v1.45\include\htc.h"
 extern const char __xc8_OPTIM_SPEED;
@@ -17336,59 +17336,23 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 
-
-# 7 "bit_config.h"
-#pragma config FEXTOSC = ECH
-#pragma config RSTOSC = HFINTPLL
-#pragma config CLKOUTEN = OFF
-#pragma config CSWEN = OFF
-#pragma config FCMEN = OFF
-
-
-#pragma config MCLRE = ON
-#pragma config PWRTE = OFF
-#pragma config LPBOREN = OFF
-#pragma config BOREN = OFF
-#pragma config BORV = LO
-#pragma config ZCD = OFF
-#pragma config PPS1WAY = OFF
-#pragma config STVREN = OFF
-
-
-#pragma config WDTCPS = WDTCPS_31
-#pragma config WDTE = OFF
-#pragma config WDTCWS = WDTCWS_7
-#pragma config WDTCCS = SC
-
-
-#pragma config WRT = OFF
-#pragma config SCANE = not_available
-#pragma config LVP = ON
-
-
-#pragma config CP = OFF
-#pragma config CPD = OFF
-
-# 39 "config.h"
-void initial_config(void);
-
-# 13 "main.c"
-void main(void) {
-
-initial_config();
-
-
-while(1)
+# 11 "config.c"
+void initial_config()
 {
-LATC=0X00;
+TRISA=0X00;
+TRISB=0X00;
+TRISC=0X00;
+
+PORTA=0X00;
+PORTB=0X00;
+PORTC=0X00;
+
 LATA=0X00;
 LATB=0X00;
-_delay((unsigned long)((1)*(32000000/4000.0)));
-LATC=0XFF;
-LATB=0XFF;
-LATA=0XFF;
-_delay((unsigned long)((1)*(32000000/4000.0)));
+LATC=0X00;
 
+ANSELA=0X00;
+ANSELB=0X00;
+ANSELC=0X00;
 
-}
 }

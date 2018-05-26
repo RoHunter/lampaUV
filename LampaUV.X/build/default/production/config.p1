@@ -1,17 +1,28 @@
 Version 3.2 HI-TECH Software Intermediate Code
-[p mainexit ]
-"39 config.h
-[v _initial_config `(v ~T0 @X0 0 ef ]
-"899 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic16f18855.h
-[v _LATC `Vuc ~T0 @X0 0 e@24 ]
+"589 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic16f18855.h
+[v _TRISA `Vuc ~T0 @X0 0 e@17 ]
+"651
+[v _TRISB `Vuc ~T0 @X0 0 e@18 ]
+"713
+[v _TRISC `Vuc ~T0 @X0 0 e@19 ]
+"382
+[v _PORTA `Vuc ~T0 @X0 0 e@12 ]
+"444
+[v _PORTB `Vuc ~T0 @X0 0 e@13 ]
+"506
+[v _PORTC `Vuc ~T0 @X0 0 e@14 ]
 "775
 [v _LATA `Vuc ~T0 @X0 0 e@22 ]
 "837
 [v _LATB `Vuc ~T0 @X0 0 e@23 ]
-[v F14219 `(v ~T0 @X0 1 tf1`ul ]
-"153 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic.h
-[v __delay `JF14219 ~T0 @X0 0 e ]
-[p i __delay ]
+"899
+[v _LATC `Vuc ~T0 @X0 0 e@24 ]
+"32991
+[v _ANSELA `Vuc ~T0 @X0 0 e@3896 ]
+"33611
+[v _ANSELB `Vuc ~T0 @X0 0 e@3907 ]
+"34231
+[v _ANSELC `Vuc ~T0 @X0 0 e@3918 ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -13091,99 +13102,51 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic.h: 193: extern __bank0 unsigned char __resetbits;
 [; ;pic.h: 194: extern __bank0 __bit __powerdown;
 [; ;pic.h: 195: extern __bank0 __bit __timeout;
-"7 bit_config.h
-[p x FEXTOSC=ECH ]
-"8
-[p x RSTOSC=HFINTPLL ]
-"9
-[p x CLKOUTEN=OFF ]
-"10
-[p x CSWEN=OFF ]
-"11
-[p x FCMEN=OFF ]
-"14
-[p x MCLRE=ON ]
-"15
-[p x PWRTE=OFF ]
-"16
-[p x LPBOREN=OFF ]
-"17
-[p x BOREN=OFF ]
-"18
-[p x BORV=LO ]
-"19
-[p x ZCD=OFF ]
-"20
-[p x PPS1WAY=OFF ]
-"21
-[p x STVREN=OFF ]
-"24
-[p x WDTCPS=WDTCPS_31 ]
-"25
-[p x WDTE=OFF ]
-"26
-[p x WDTCWS=WDTCWS_7 ]
-"27
-[p x WDTCCS=SC ]
-"30
-[p x WRT=OFF ]
-"31
-[p x SCANE=not_available ]
-"32
-[p x LVP=ON ]
-"35
-[p x CP=OFF ]
-"36
-[p x CPD=OFF ]
-[; ;config.h: 39: void initial_config(void);
-[v $root$_main `(v ~T0 @X0 0 e ]
-"13 main.c
-[v _main `(v ~T0 @X0 1 ef ]
+"11 config.c
+[v _initial_config `(v ~T0 @X0 1 ef ]
+"12
 {
-[; ;main.c: 13: void main(void) {
-[e :U _main ]
+[; ;config.c: 11: void initial_config()
+[; ;config.c: 12: {
+[e :U _initial_config ]
 [f ]
-[; ;main.c: 15: initial_config();
+[; ;config.c: 13: TRISA=0X00;
+"13
+[e = _TRISA -> -> 0 `i `uc ]
+[; ;config.c: 14: TRISB=0X00;
+"14
+[e = _TRISB -> -> 0 `i `uc ]
+[; ;config.c: 15: TRISC=0X00;
 "15
-[e ( _initial_config ..  ]
-[; ;main.c: 18: while(1)
+[e = _TRISC -> -> 0 `i `uc ]
+[; ;config.c: 17: PORTA=0X00;
+"17
+[e = _PORTA -> -> 0 `i `uc ]
+[; ;config.c: 18: PORTB=0X00;
 "18
-[e :U 1565 ]
-[; ;main.c: 19: {
+[e = _PORTB -> -> 0 `i `uc ]
+[; ;config.c: 19: PORTC=0X00;
 "19
-{
-[; ;main.c: 20: LATC=0X00;
-"20
-[e = _LATC -> -> 0 `i `uc ]
-[; ;main.c: 21: LATA=0X00;
+[e = _PORTC -> -> 0 `i `uc ]
+[; ;config.c: 21: LATA=0X00;
 "21
 [e = _LATA -> -> 0 `i `uc ]
-[; ;main.c: 22: LATB=0X00;
+[; ;config.c: 22: LATB=0X00;
 "22
 [e = _LATB -> -> 0 `i `uc ]
-[; ;main.c: 23: _delay((unsigned long)((1)*(32000000/4000.0)));
+[; ;config.c: 23: LATC=0X00;
 "23
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-[; ;main.c: 24: LATC=0XFF;
-"24
-[e = _LATC -> -> 255 `i `uc ]
-[; ;main.c: 25: LATB=0XFF;
+[e = _LATC -> -> 0 `i `uc ]
+[; ;config.c: 25: ANSELA=0X00;
 "25
-[e = _LATB -> -> 255 `i `uc ]
-[; ;main.c: 26: LATA=0XFF;
+[e = _ANSELA -> -> 0 `i `uc ]
+[; ;config.c: 26: ANSELB=0X00;
 "26
-[e = _LATA -> -> 255 `i `uc ]
-[; ;main.c: 27: _delay((unsigned long)((1)*(32000000/4000.0)));
+[e = _ANSELB -> -> 0 `i `uc ]
+[; ;config.c: 27: ANSELC=0X00;
 "27
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"30
-}
-[e :U 1564 ]
-"18
-[e $U 1565  ]
-[e :U 1566 ]
-[; ;main.c: 30: }
-[; ;main.c: 31: }
-"31
+[e = _ANSELC -> -> 0 `i `uc ]
+[; ;config.c: 29: }
+"29
 [e :UE 1563 ]
 }
